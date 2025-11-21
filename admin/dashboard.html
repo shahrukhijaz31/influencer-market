@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Casters.fi</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Casters.fi" class="sidebar-logo">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-section-title">Users</p>
+                </div>
+                <a href="influencers.html" class="sidebar-link">
+                    <i class="fas fa-users"></i>
+                    <span>Influencers</span>
+                </a>
+                <a href="brands.html" class="sidebar-link">
+                    <i class="fas fa-building"></i>
+                    <span>Brands</span>
+                </a>
+                <a href="managers.html" class="sidebar-link">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Managers</span>
+                </a>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-section-title">Content</p>
+                </div>
+                <a href="campaigns.html" class="sidebar-link">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Campaigns</span>
+                </a>
+                <a href="create-campaign.html" class="sidebar-link">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Campaign</span>
+                </a>
+                <a href="categories.html" class="sidebar-link">
+                    <i class="fas fa-tags"></i>
+                    <span>Categories</span>
+                </a>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-section-title">System</p>
+                </div>
+                <a href="subscriptions.html" class="sidebar-link">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Subscriptions</span>
+                </a>
+                <a href="reports.html" class="sidebar-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="../login.html" class="sidebar-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name">Admin</span>
+                        <span class="sidebar-user-email">admin@casters.fi</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Bar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="topbar-title">Admin Dashboard</h1>
+                </div>
+                <div class="topbar-right">
+                    <div class="topbar-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="topbar-actions">
+                        <div class="topbar-icon">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="stat-card-change positive">+12</span>
+                        </div>
+                        <div class="stat-card-value">542</div>
+                        <div class="stat-card-label">Total Influencers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <span class="stat-card-change positive">+3</span>
+                        </div>
+                        <div class="stat-card-value">87</div>
+                        <div class="stat-card-label">Active Brands</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <span class="stat-card-change positive">+8</span>
+                        </div>
+                        <div class="stat-card-value">156</div>
+                        <div class="stat-card-label">Total Campaigns</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-euro-sign"></i>
+                            </div>
+                            <span class="stat-card-change positive">+15%</span>
+                        </div>
+                        <div class="stat-card-value">€24.5K</div>
+                        <div class="stat-card-label">Monthly Revenue</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Main Content Column -->
+                    <div>
+                        <!-- Recent Registrations -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recent Influencer Registrations</h3>
+                                <a href="influencers.html" class="btn btn-outline">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Type</th>
+                                            <th>Country</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 10px;">
+                                                    <div class="sidebar-user-avatar" style="width: 32px; height: 32px; font-size: 12px;">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    Anna S.
+                                                </div>
+                                            </td>
+                                            <td>anna.s@email.com</td>
+                                            <td><span class="category-tag">Influencer</span></td>
+                                            <td>Finland</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 12px;">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 10px;">
+                                                    <div class="sidebar-user-avatar" style="width: 32px; height: 32px; font-size: 12px;">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    Mika L.
+                                                </div>
+                                            </td>
+                                            <td>mika.l@email.com</td>
+                                            <td><span class="category-tag">Content Creator</span></td>
+                                            <td>Finland</td>
+                                            <td>Yesterday</td>
+                                            <td>
+                                                <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 12px;">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 10px;">
+                                                    <div class="sidebar-user-avatar" style="width: 32px; height: 32px; font-size: 12px;">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    Julia H.
+                                                </div>
+                                            </td>
+                                            <td>julia.h@email.com</td>
+                                            <td><span class="category-tag">Both</span></td>
+                                            <td>Sweden</td>
+                                            <td>2 days ago</td>
+                                            <td>
+                                                <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 12px;">View</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Active Campaigns -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Active Campaigns</h3>
+                                <a href="campaigns.html" class="btn btn-outline">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <ul class="campaign-list">
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-tshirt"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Winter Collection - Fashion Brand Co.</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-users"></i> 8 influencers &bull;
+                                                <i class="fas fa-eye"></i> 25 applications
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-active">Active</span>
+                                    </li>
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-utensils"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Restaurant Week - Helsinki Eats</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-users"></i> 5 influencers &bull;
+                                                <i class="fas fa-eye"></i> 18 applications
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-active">Active</span>
+                                    </li>
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-dumbbell"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Fitness App - HealthTech Inc</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-users"></i> 15 influencers &bull;
+                                                <i class="fas fa-eye"></i> 42 applications
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-pending">Reviewing</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Managers -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Managers</h3>
+                                <a href="managers.html" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> Add Manager
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Last Active</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 10px;">
+                                                    <div class="sidebar-user-avatar" style="width: 32px; height: 32px; font-size: 12px;">
+                                                        <i class="fas fa-user-tie"></i>
+                                                    </div>
+                                                    John Admin
+                                                </div>
+                                            </td>
+                                            <td>john@casters.fi</td>
+                                            <td>Super Admin</td>
+                                            <td>Online</td>
+                                            <td>
+                                                <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 12px;">Edit</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 10px;">
+                                                    <div class="sidebar-user-avatar" style="width: 32px; height: 32px; font-size: 12px;">
+                                                        <i class="fas fa-user-tie"></i>
+                                                    </div>
+                                                    Maria K.
+                                                </div>
+                                            </td>
+                                            <td>maria@casters.fi</td>
+                                            <td>Campaign Manager</td>
+                                            <td>2h ago</td>
+                                            <td>
+                                                <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 12px;">Edit</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div>
+                        <!-- Quick Actions -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Quick Actions</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="quick-actions">
+                                    <a href="brands.html?action=add" class="quick-action">
+                                        <i class="fas fa-building"></i>
+                                        <span>Add Brand</span>
+                                    </a>
+                                    <a href="create-campaign.html" class="quick-action">
+                                        <i class="fas fa-bullhorn"></i>
+                                        <span>New Campaign</span>
+                                    </a>
+                                    <a href="managers.html?action=add" class="quick-action">
+                                        <i class="fas fa-user-plus"></i>
+                                        <span>Add Manager</span>
+                                    </a>
+                                    <a href="reports.html" class="quick-action">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <span>View Reports</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Platform Stats -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Platform Overview</h3>
+                            </div>
+                            <div class="card-body">
+                                <div style="margin-bottom: var(--spacing-lg);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-xs);">
+                                        <span class="text-secondary" style="font-size: var(--font-size-sm);">Level 1 Brands</span>
+                                        <span style="font-weight: 600;">52</span>
+                                    </div>
+                                    <div class="completion-bar">
+                                        <div class="completion-progress" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom: var(--spacing-lg);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-xs);">
+                                        <span class="text-secondary" style="font-size: var(--font-size-sm);">Level 2 Brands</span>
+                                        <span style="font-weight: 600;">35</span>
+                                    </div>
+                                    <div class="completion-bar">
+                                        <div class="completion-progress" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom: var(--spacing-lg);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-xs);">
+                                        <span class="text-secondary" style="font-size: var(--font-size-sm);">Active Campaigns</span>
+                                        <span style="font-weight: 600;">28</span>
+                                    </div>
+                                    <div class="completion-bar">
+                                        <div class="completion-progress" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-xs);">
+                                        <span class="text-secondary" style="font-size: var(--font-size-sm);">Verified Influencers</span>
+                                        <span style="font-weight: 600;">412</span>
+                                    </div>
+                                    <div class="completion-bar">
+                                        <div class="completion-progress" style="width: 76%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">System Activity</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="message-list">
+                                    <div class="message-item">
+                                        <div class="message-avatar" style="background: var(--success);">
+                                            <i class="fas fa-user-plus"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">New Registration</span>
+                                                <span class="message-time">5m ago</span>
+                                            </div>
+                                            <div class="message-preview">Anna S. registered as influencer</div>
+                                        </div>
+                                    </div>
+                                    <div class="message-item">
+                                        <div class="message-avatar" style="background: var(--primary-color);">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">Campaign Created</span>
+                                                <span class="message-time">1h ago</span>
+                                            </div>
+                                            <div class="message-preview">Fashion Brand Co. created new campaign</div>
+                                        </div>
+                                    </div>
+                                    <div class="message-item">
+                                        <div class="message-avatar" style="background: var(--warning);">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">Campaign Completed</span>
+                                                <span class="message-time">3h ago</span>
+                                            </div>
+                                            <div class="message-preview">Coffee Shop Promo marked complete</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
+        }
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Configuration files with sensitive data
+includes/config.php
+
+# User uploads
+uploads/*
+!uploads/.gitkeep
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+error_log
+debug.log
+
+# PHP
+vendor/
+composer.lock
+
+# Test files
+*-test.php
+test-*.php
+add-test-users.php
+clear-test-values.php
+update-*.php
+setup.php
+
+# Misc
+nul
+product_description.txt

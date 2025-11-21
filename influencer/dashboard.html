@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Casters.fi</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Casters.fi" class="sidebar-logo">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="profile.html" class="sidebar-link">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="campaigns.html" class="sidebar-link">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Browse Campaigns</span>
+                    <span class="badge">12</span>
+                </a>
+                <a href="applications.html" class="sidebar-link">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>My Applications</span>
+                </a>
+                <a href="active-campaigns.html" class="sidebar-link">
+                    <i class="fas fa-tasks"></i>
+                    <span>Active Campaigns</span>
+                </a>
+
+                <div class="sidebar-section">
+                    <p class="sidebar-section-title">Account</p>
+                </div>
+                <a href="settings.html" class="sidebar-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="../login.html" class="sidebar-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name">Sarah M.</span>
+                        <span class="sidebar-user-email">sarah@email.com</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Bar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="topbar-title">Dashboard</h1>
+                </div>
+                <div class="topbar-right">
+                    <div class="topbar-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search campaigns...">
+                    </div>
+                    <div class="topbar-actions">
+                        <div class="topbar-icon">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-dot"></span>
+                        </div>
+                        <div class="topbar-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Profile Completion -->
+                <div class="dashboard-card">
+                    <div class="card-body">
+                        <div class="profile-completion">
+                            <div class="completion-header">
+                                <span>Profile Completion</span>
+                                <span class="text-primary">65%</span>
+                            </div>
+                            <div class="completion-bar">
+                                <div class="completion-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <p class="text-secondary" style="font-size: var(--font-size-sm);">
+                            Complete your profile to get matched with more campaigns.
+                            <a href="profile.html" class="text-primary">Update profile</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="stat-card-value">4.8</div>
+                        <div class="stat-card-label">Your Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span class="stat-card-change positive">+2</span>
+                        </div>
+                        <div class="stat-card-value">8</div>
+                        <div class="stat-card-label">Campaigns Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="stat-card-value">3</div>
+                        <div class="stat-card-label">Applications Pending</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                        </div>
+                        <div class="stat-card-value">2</div>
+                        <div class="stat-card-label">Active Campaigns</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Main Content Column -->
+                    <div>
+                        <!-- Available Campaigns -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recommended Campaigns</h3>
+                                <a href="campaigns.html" class="btn btn-outline">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <ul class="campaign-list">
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-utensils"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Restaurant Week Helsinki</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-map-marker-alt"></i> Helsinki &bull;
+                                                <i class="fas fa-users"></i> 5 spots
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-active">Open</span>
+                                    </li>
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-tshirt"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Winter Fashion Collection</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-map-marker-alt"></i> Nationwide &bull;
+                                                <i class="fas fa-users"></i> 10 spots
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-active">Open</span>
+                                    </li>
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-dumbbell"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Fitness App Launch</div>
+                                            <div class="campaign-meta">
+                                                <i class="fas fa-map-marker-alt"></i> Online &bull;
+                                                <i class="fas fa-users"></i> 20 spots
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-active">Open</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- My Active Campaigns -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">My Active Campaigns</h3>
+                                <a href="active-campaigns.html" class="btn btn-outline">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <ul class="campaign-list">
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-coffee"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Local Coffee Shop Promo</div>
+                                            <div class="campaign-meta">
+                                                Deadline: Dec 15, 2024 &bull; 2 IG stories
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-pending">In Progress</span>
+                                    </li>
+                                    <li class="campaign-item">
+                                        <div class="campaign-image">
+                                            <i class="fas fa-spa"></i>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <div class="campaign-name">Beauty Brand Launch</div>
+                                            <div class="campaign-meta">
+                                                Deadline: Dec 20, 2024 &bull; 1 reel, 1 post
+                                            </div>
+                                        </div>
+                                        <span class="campaign-status status-pending">In Progress</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div>
+                        <!-- Quick Actions -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Quick Actions</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="quick-actions">
+                                    <a href="campaigns.html" class="quick-action">
+                                        <i class="fas fa-search"></i>
+                                        <span>Find Campaigns</span>
+                                    </a>
+                                    <a href="profile.html" class="quick-action">
+                                        <i class="fas fa-user-edit"></i>
+                                        <span>Edit Profile</span>
+                                    </a>
+                                    <a href="applications.html" class="quick-action">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>My Applications</span>
+                                    </a>
+                                    <a href="settings.html" class="quick-action">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recent Activity</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="message-list">
+                                    <div class="message-item unread">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">Application Accepted</span>
+                                                <span class="message-time">2h ago</span>
+                                            </div>
+                                            <div class="message-preview">Your application for "Coffee Shop Promo" was accepted!</div>
+                                        </div>
+                                    </div>
+                                    <div class="message-item">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">New Rating</span>
+                                                <span class="message-time">1d ago</span>
+                                            </div>
+                                            <div class="message-preview">You received a 5-star rating from FashionBrand</div>
+                                        </div>
+                                    </div>
+                                    <div class="message-item">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-header">
+                                                <span class="message-sender">New Campaign</span>
+                                                <span class="message-time">2d ago</span>
+                                            </div>
+                                            <div class="message-preview">A new campaign matching your interests is available</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Your Rating -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Your Rating</h3>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <div style="font-size: 3rem; font-weight: 700; color: var(--warning); margin-bottom: var(--spacing-sm);">
+                                    4.8
+                                </div>
+                                <div class="rating-display" style="justify-content: center; margin-bottom: var(--spacing-md);">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <p class="text-secondary" style="font-size: var(--font-size-sm);">
+                                    Based on 8 completed campaigns
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
+        }
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

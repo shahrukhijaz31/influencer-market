@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Casters.fi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-hero {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            color: white;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-hero p {
+            opacity: 0.9;
+            font-size: var(--font-size-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-3xl);
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+        }
+
+        .contact-info h3 {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            font-size: var(--font-size-base);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .contact-item-content p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .contact-item-content a {
+            color: var(--primary-dark);
+        }
+
+        .social-contact {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-contact h4 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .contact-form-container {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form-container h3 {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .inquiry-type {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .inquiry-option {
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .inquiry-option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .inquiry-option.selected {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        .inquiry-option i {
+            display: block;
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .inquiry-option span {
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-secondary);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .faq-item {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question i {
+            color: var(--primary-dark);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding-top: var(--spacing-md);
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.6;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .inquiry-type {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="Casters.fi">
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#for-influencers">For Influencers</a>
+                    <a href="index.html#for-brands">For Brands</a>
+                    <a href="index.html#campaigns">Campaigns</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Have questions about our platform? Want to partner as a brand? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@casters.fi">info@casters.fi</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+358401234567">+358 40 123 4567</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Visit Us</h4>
+                            <p>Helsinki, Finland</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 - 17:00 (EET)</p>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">I'm inquiring as a:</label>
+                            <div class="inquiry-type">
+                                <div class="inquiry-option" data-value="brand">
+                                    <i class="fas fa-building"></i>
+                                    <span>Brand</span>
+                                </div>
+                                <div class="inquiry-option" data-value="influencer">
+                                    <i class="fas fa-user"></i>
+                                    <span>Influencer</span>
+                                </div>
+                                <div class="inquiry-option" data-value="other">
+                                    <i class="fas fa-question"></i>
+                                    <span>Other</span>
+                                </div>
+                            </div>
+                            <input type="hidden" id="inquiryType" name="inquiry_type" value="">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contactName">Full Name *</label>
+                                <input type="text" class="form-input" id="contactName" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contactEmail">Email *</label>
+                                <input type="email" class="form-input" id="contactEmail" name="email" required placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contactPhone">Phone</label>
+                                <input type="tel" class="form-input" id="contactPhone" name="phone" placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contactCompany">Company</label>
+                                <input type="text" class="form-input" id="contactCompany" name="company" placeholder="Company name (if applicable)">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject">Subject *</label>
+                            <select class="form-select" id="contactSubject" name="subject" required>
+                                <option value="">Select subject</option>
+                                <option value="brand_partnership">Brand Partnership</option>
+                                <option value="general_inquiry">General Inquiry</option>
+                                <option value="technical_support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactMessage">Message *</label>
+                            <textarea class="form-textarea" id="contactMessage" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-check">
+                                <input type="checkbox" name="newsletter">
+                                <span>I would like to receive newsletters, offers & tips</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I become an influencer on Casters.fi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Simply click "Get Started" and create your profile. Fill in your basic information, connect your social media accounts, and you're ready to start applying for campaigns. The registration is free and takes just a few minutes.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can brands join the platform?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Brands cannot self-register. Instead, please contact us through this form and we'll set up your brand account. This helps us maintain quality and provide personalized onboarding for each brand partner.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What types of compensation are available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Compensation varies by campaign and can include free products, services (like dinners or experiences), monetary payment, or a combination. Each campaign listing clearly states the compensation offered.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the subscription levels for brands?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We offer two levels: Level 1 allows posting campaigns and viewing applicants. Level 2 adds full database access, direct messaging with influencers, and the ability to make private offers. Contact us to learn more about pricing.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How does the rating system work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        After each campaign, both brands and influencers can rate each other on a 5-star scale, similar to Uber. This helps maintain quality and builds trust within our community. Ratings are visible on profiles.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What social platforms are supported?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We currently support Instagram, TikTok, YouTube, and Facebook. You can link all your social accounts to your profile and showcase your follower counts for each platform.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Casters.fi" class="footer-logo">
+                    <p>The premier influencer marketing platform in Finland. Connecting brands with authentic content creators.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#for-influencers">For Influencers</a>
+                    <a href="index.html#for-brands">For Brands</a>
+                    <a href="index.html#campaigns">Campaigns</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Help Center</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Casters.fi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Inquiry type selection
+        const inquiryOptions = document.querySelectorAll('.inquiry-option');
+        const inquiryInput = document.getElementById('inquiryType');
+
+        inquiryOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                inquiryOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                inquiryInput.value = this.dataset.value;
+            });
+        });
+
+        // FAQ toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('open');
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+
+            if (!name || !email || !subject || !message) {
+                showToast('Please fill in all required fields', 'error');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                showToast('Please enter a valid email address', 'error');
+                return;
+            }
+
+            showToast('Sending message...', 'info');
+
+            // Simulate form submission
+            setTimeout(() => {
+                showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+                this.reset();
+                inquiryOptions.forEach(opt => opt.classList.remove('selected'));
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

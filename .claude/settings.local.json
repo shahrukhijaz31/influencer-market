@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:influcheck.com)",
+      "WebFetch(domain:collabstr.com)",
+      "WebFetch(domain:passiofy.com)",
+      "WebFetch(domain:invitedagency.com)",
+      "Bash(profile_temp.php)",
+      "Bash(move /Y profile_temp.php profile.php:*)",
+      "Bash(mysql:*)",
+      "Bash(/c/xampp/mysql/bin/mysql:*)",
+      "Bash(nul)",
+      "Bash(test:*)",
+      "Bash(find:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
